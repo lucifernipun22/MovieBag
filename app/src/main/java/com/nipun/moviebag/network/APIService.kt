@@ -20,16 +20,16 @@ interface APIService {
      suspend fun getMoviesList(@Query("api_key") apiKey: String, @Query("page") pageIndex: Int): MovieX
 
     @GET("movie/{id}")
-    suspend fun getMovieDetails(@Query("api_key") apiKey: String, @Query("page") pageIndex: Int): Call<Details>
+     suspend fun getMovieDetails(@Path("id") id: Long,@Query("api_key") apiKey: String, @Query("page") pageIndex: Int): Details
 
     @GET("movie/top_rated")
     suspend fun getTopRated(@Query("api_key") apiKey: String, @Query("page") pageIndex: Int): TopRatedMovies
 
     @GET("movie/{movieId}/casts")
-    suspend fun getCast(@Path("movieId") movieId: Long, @Query("api_key") apiKey: String, @Query("page") pageIndex: Int): Call<Cast>
+    suspend fun getCast(@Path("movieId") movieId: Long, @Query("api_key") apiKey: String, @Query("page") pageIndex: Int): Cast
 
     @GET("movie/{movieId}/reviews")
-    suspend fun getReview(@Path("movieId") movieId: Long, @Query("api_key") apiKey: String, @Query("page") pageIndex: Int): Call<Review>
+    suspend fun getReview(@Path("movieId") movieId: Long, @Query("api_key") apiKey: String, @Query("page") pageIndex: Int): Review
 
 
 }

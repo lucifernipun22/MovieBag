@@ -1,4 +1,4 @@
-package com.nipun.moviebag.adapter
+package com.nipun.moviebag.adapter.movie
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -14,13 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieBag"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MovieDetailActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".ui.ReviewForTrending" />
+        <activity android:name=".ui.CastForTrendingActivity" />
+        <activity android:name=".ui.ReviewActivity" />
+        <activity android:name=".ui.MovieDetailActivity2" />
+        <activity android:name=".ui.CastActivity" />
+        <activity android:name=".ui.MovieDetailActivity" />
+        <activity android:name=".ui.MainActivity">
+
         </activity>
 
         <meta-data

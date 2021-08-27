@@ -1,6 +1,7 @@
-package com.nipun.moviebag
+package com.nipun.moviebag.ui
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -8,11 +9,11 @@ import android.view.View
 import android.widget.ImageView
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.nipun.moviebag.adapter.MoviesAdapter
-import com.nipun.moviebag.adapter.TrendingMoviesAdapter
+import com.nipun.moviebag.R
+import com.nipun.moviebag.adapter.movie.MoviesAdapter
+import com.nipun.moviebag.adapter.trendingMovie.TrendingMoviesAdapter
 import com.nipun.moviebag.clickListener.ImageClickListener
 import com.nipun.moviebag.databinding.ActivityMainBinding
 import com.nipun.moviebag.model.movieList.Movie
@@ -30,12 +31,13 @@ class MainActivity : AppCompatActivity(), ImageClickListener {
     private var topRated = mutableListOf<Result>()
     private lateinit var moviesAdapter: MoviesAdapter
     private lateinit var trendingMoviesAdapter: TrendingMoviesAdapter
-    var page = 0;
+    var page = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
@@ -47,7 +49,7 @@ class MainActivity : AppCompatActivity(), ImageClickListener {
             shimmerFrameLayout.startShimmerAnimation()
         }
 
-        val layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL,false)
+        val layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
         setMoviesListRecycler(layoutManager)
 
         setTrendingMoviesRecycler()
@@ -162,21 +164,23 @@ class MainActivity : AppCompatActivity(), ImageClickListener {
      * on click of each item its data will be passed to next activity through intent
      */
 
-    override fun onImageClicked(showsModel: Movie, mIvImage: ImageView) {
-        /*val intent = Intent(this, MovieDetailsActivity::class.java)
-        intent.putExtra("movies", showsModel)
-        *//**
-         * this is to give animation effect to the image while passing data to the next activity
-         *//*
-        val options = ActivityOptionsCompat.makeSceneTransitionAnimation(
-            this,
-            mIvImage,
-            ViewCompat.getTransitionName(mIvImage)!!
-        )
-        startActivity(intent, options.toBundle())*/
+    override fun onImageClicked(movie: Movie, mIvImage: ImageView) {
+        val intent = Intent(this, MovieDetailActivity::class.java)
+        intent.putExtra("movies", movie)
+
+        startActivity(intent)
     }
 
-    override fun onImageClickedToRated(movieResponse: Result, mIvImage: ImageView) {
+    /**
+     * on click of each horizontal item its data will be passed to next activity through intent
+     */
+
+    override fun onImageClickedToRated(movie: Result, mIvImage: ImageView) {
+        val intent = Intent(this, MovieDetailActivity2::class.java)
+        intent.putExtra("movies1", movie)
+
+
+        startActivity(intent)
 
     }
 }

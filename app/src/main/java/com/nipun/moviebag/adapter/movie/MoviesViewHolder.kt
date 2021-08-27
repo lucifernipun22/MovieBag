@@ -1,10 +1,11 @@
-package com.nipun.moviebag.adapter
+package com.nipun.moviebag.adapter.movie
 
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.RatingBar
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.nipun.moviebag.R
@@ -17,7 +18,7 @@ class MoviesViewHolder(private val view: View, private val imageClickListener: I
     fun setData(moviesItem: Movie) {
         view.apply {
             val mIvImage = findViewById<ImageView>(R.id.ivAvatar)
-
+            val card = findViewById<CardView>(R.id.itemCard)
 
             Glide.with(context).load(BASE_IMAGE_URL + moviesItem.poster_path).into(mIvImage)
             val movieName = findViewById<TextView>(R.id.MovieName)
@@ -26,12 +27,13 @@ class MoviesViewHolder(private val view: View, private val imageClickListener: I
             language.text = moviesItem.original_language
             val releaseDate = findViewById<TextView>(R.id.ReleaseDateValue)
             releaseDate.text = moviesItem.release_date
-            mIvImage.setOnClickListener {
+            val ratingBar = findViewById<RatingBar>(R.id.starRatingBar)
+            ratingBar.rating = moviesItem.vote_average.toString().toFloat() / 2
+            val ratingText = findViewById<TextView>(R.id.tvStarRating)
+            ratingText.text = moviesItem.vote_average.toString()
+            card.setOnClickListener {
                 imageClickListener.onImageClicked(moviesItem, mIvImage)
-                val ratingBar = findViewById<RatingBar>(R.id.starRatingBar)
-                ratingBar.rating = moviesItem.vote_average.toString().toFloat() / 2
-                val ratingText = findViewById<TextView>(R.id.tvStarRating)
-                ratingText.text = moviesItem.vote_average.toString()
+
             }
         }
     }

@@ -1,4 +1,4 @@
-package com.nipun.moviebag.adapter
+package com.nipun.moviebag.adapter.similarMovies
 
 import android.view.View
 import android.widget.ImageView
@@ -6,16 +6,13 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.nipun.moviebag.R
 import com.nipun.moviebag.clickListener.ImageClickListener
-import com.nipun.moviebag.model.movieList.Movie
 import com.nipun.moviebag.model.topRated.Result
 
-class TrendingMoviesViewHolder (private val view: View,private val imageClickListener : ImageClickListener) : RecyclerView.ViewHolder(view) {
+class SimilarViewHolder (private val view: View, private val imageClickListener : ImageClickListener) : RecyclerView.ViewHolder(view) {
     fun setData(moviesItem: Result) {
         view.apply {
-            val mIvImage = findViewById<ImageView>(R.id.ivImgShow)
-
-
-            Glide.with(context).load(BASE_IMAGE_URL+moviesItem.poster_path).into(mIvImage)
+            val mIvImage = findViewById<ImageView>(R.id.ivAvatar3)
+            Glide.with(context).load(BASE_IMAGE_URL +moviesItem.poster_path).into(mIvImage)
 
             mIvImage.setOnClickListener {
                 imageClickListener.onImageClickedToRated(moviesItem,mIvImage)

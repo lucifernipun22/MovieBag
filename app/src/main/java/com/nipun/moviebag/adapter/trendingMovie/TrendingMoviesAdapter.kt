@@ -1,11 +1,10 @@
-package com.nipun.moviebag.adapter
+package com.nipun.moviebag.adapter.trendingMovie
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.nipun.moviebag.R
 import com.nipun.moviebag.clickListener.ImageClickListener
-import com.nipun.moviebag.model.movieList.Movie
 import com.nipun.moviebag.model.topRated.Result
 
 class TrendingMoviesAdapter(private val trendingList: List<Result>, private val imageClickListener : ImageClickListener) :

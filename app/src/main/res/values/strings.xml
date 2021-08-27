@@ -4,5 +4,11 @@
     <string name="release_date">Release Date : </string>
     <string name="trending">Trending</string>
     <string name="home">Home</string>
+    <string name="release_status">Release Status : </string>
+    <string name="synopsis">Synopsis</string>
+    <string name="cast">Cast</string>
+    <string name="production_house">Production House</string>
+    <string name="review">Review</string>
+    <string name="similar_movies">Similar Movies</string>
 
 </resources>
