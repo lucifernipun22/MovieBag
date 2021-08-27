@@ -5,7 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.nipun.moviebag.R
 import com.nipun.moviebag.model.reviews.Results
-
+/**
+ * adapter for Review activity recycler view
+ */
 class ReviewAdapter(private val moviesList: List<Results>) :
     RecyclerView.Adapter<ReviewViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewViewHolder {

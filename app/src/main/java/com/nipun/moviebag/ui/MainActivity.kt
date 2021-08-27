@@ -6,8 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ActionMenuView
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.activity.viewModels
+import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -31,6 +34,7 @@ class MainActivity : AppCompatActivity(), ImageClickListener {
     private var topRated = mutableListOf<Result>()
     private lateinit var moviesAdapter: MoviesAdapter
     private lateinit var trendingMoviesAdapter: TrendingMoviesAdapter
+
     var page = 0
 
 
@@ -69,6 +73,7 @@ class MainActivity : AppCompatActivity(), ImageClickListener {
 
         viewModel.getMoviesViewModel(1).observe(this, Observer {
             shimmerDisplay()
+            moviesList.clear()
             val res = it.data!!
             moviesList.addAll(res)
             Log.d("Nipun", moviesList.size.toString())
@@ -77,6 +82,7 @@ class MainActivity : AppCompatActivity(), ImageClickListener {
         })
         viewModel.getTopRatedViewModel(1).observe(this, Observer {
             shimmerDisplay()
+            topRated.clear()
             val res = it.data!!
             topRated.addAll(res)
             Log.d("Nipun", moviesList.size.toString())

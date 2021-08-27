@@ -55,7 +55,10 @@ class MoviesRepository  @Inject constructor(val aPiService: APIService){
             return responseHandler.handleException(e)
         }
     }
-
+    /**
+     * calling the function from ApiService and returning the resource cast handling the
+     * success and exception if there are any.
+     */
     suspend fun getProduction(id: Long,page : Int): Resource<List<ProductionCompany>> {
         val result = aPiService.getMovieDetails(id,"15291200108ef5862d8d3ee59d0a2577",page)
         try {
@@ -64,7 +67,10 @@ class MoviesRepository  @Inject constructor(val aPiService: APIService){
             return responseHandler.handleException(e)
         }
     }
-
+    /**
+     * calling the function from ApiService and returning the resource cast handling the
+     * success and exception if there are any.
+     */
     suspend fun getReview(id: Long,page : Int): Resource<List<Results>> {
         val result = aPiService.getReview(id,"15291200108ef5862d8d3ee59d0a2577",page)
         try {

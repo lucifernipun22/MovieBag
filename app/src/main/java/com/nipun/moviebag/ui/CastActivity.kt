@@ -31,8 +31,6 @@ class CastActivity : AppCompatActivity() {
         setMoviesListRecycler(layoutManager)
         callApi(viewModel)
 
-
-
     }
     /**
      * calling the api  here.

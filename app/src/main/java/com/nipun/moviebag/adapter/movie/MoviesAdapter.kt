@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.nipun.moviebag.R
 import com.nipun.moviebag.clickListener.ImageClickListener
 import com.nipun.moviebag.model.movieList.Movie
-
+/**
+ * adapter for MoviesList activity recycler view
+ */
 class MoviesAdapter(private val moviesList: List<Movie>, private val imageClickListener : ImageClickListener) :
     RecyclerView.Adapter<MoviesViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MoviesViewHolder {

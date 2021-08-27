@@ -39,20 +39,30 @@ class MoviesViewModel @Inject constructor(private val repository : MoviesReposit
             emit(result)
         }
     }
-
+    /**
+     * calling the get getCast from repository and returning the livedata, the resource class
+     * is wrapping the data and returning livedata.
+     */
     fun getCast(id: Long,page : Int): LiveData<Resource<List<CastX>>> {
         return liveData(Dispatchers.IO) {
             val result = repository.getCast(id,page)
             emit(result)
         }
     }
-
+    /**
+     * calling the get getDetail from repository and returning the livedata, the resource class
+     * is wrapping the data and returning livedata.
+     */
     fun getDetail(id: Long,page : Int): LiveData<Resource<List<ProductionCompany>>> {
         return liveData(Dispatchers.IO) {
             val result = repository.getProduction(id,page)
             emit(result)
         }
     }
+    /**
+     * calling the get getReview from repository and returning the livedata, the resource class
+     * is wrapping the data and returning livedata.
+     */
     fun getReview(id: Long,page : Int): LiveData<Resource<List<Results>>> {
         return liveData(Dispatchers.IO) {
             val result = repository.getReview(id,page)

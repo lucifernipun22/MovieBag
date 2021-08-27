@@ -6,6 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.nipun.moviebag.R
 import com.nipun.moviebag.model.casts.CastX
 
+/**
+ * adapter for cast activity recycler view
+ */
 class CastAdapter(private val moviesList: List<CastX>) :
     RecyclerView.Adapter<CastViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CastViewHolder {

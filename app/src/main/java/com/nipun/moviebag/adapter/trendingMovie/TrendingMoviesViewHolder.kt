@@ -7,7 +7,9 @@ import com.bumptech.glide.Glide
 import com.nipun.moviebag.R
 import com.nipun.moviebag.clickListener.ImageClickListener
 import com.nipun.moviebag.model.topRated.Result
-
+/**
+ * view holder of Trending Movies update the data
+ */
 class TrendingMoviesViewHolder (private val view: View,private val imageClickListener : ImageClickListener) : RecyclerView.ViewHolder(view) {
     fun setData(moviesItem: Result) {
         view.apply {

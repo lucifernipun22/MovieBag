@@ -8,7 +8,9 @@ import com.nipun.moviebag.R
 
 import com.nipun.moviebag.model.movieDetails.ProductionCompany
 import de.hdodenhof.circleimageview.CircleImageView
-
+/**
+ * view holder of Production update the data
+ */
 class ProductionViewHolder(private val view: View) :
     RecyclerView.ViewHolder(view) {
     fun setData(moviesItem: ProductionCompany) {

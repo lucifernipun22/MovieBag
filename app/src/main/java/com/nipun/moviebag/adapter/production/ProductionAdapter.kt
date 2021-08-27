@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.nipun.moviebag.R
 
 import com.nipun.moviebag.model.movieDetails.ProductionCompany
-
+/**
+ * adapter for Production recycler view
+ */
 class ProductionAdapter (private var moviesList: List<ProductionCompany>) :
     RecyclerView.Adapter<ProductionViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductionViewHolder {

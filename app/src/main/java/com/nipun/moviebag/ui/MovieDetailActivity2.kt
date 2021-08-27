@@ -68,6 +68,10 @@ class MovieDetailActivity2 : AppCompatActivity() , ImageClickListener{
             }
         }
     }
+
+    /**
+     * pass this activity to castForTrendingActivity
+     */
     private fun clickListener() {
 
         val intent = Intent(this@MovieDetailActivity2, CastForTrendingActivity::class.java)
@@ -75,6 +79,10 @@ class MovieDetailActivity2 : AppCompatActivity() , ImageClickListener{
         startActivity(intent)
 
     }
+
+    /**
+     * pass this activity to ReviewForTrending
+     */
     private fun clickListener2() {
 
         val intent = Intent(this@MovieDetailActivity2, ReviewForTrending::class.java)

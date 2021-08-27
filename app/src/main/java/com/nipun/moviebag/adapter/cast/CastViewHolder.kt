@@ -8,6 +8,9 @@ import com.bumptech.glide.Glide
 import com.nipun.moviebag.R
 import com.nipun.moviebag.model.casts.CastX
 
+/**
+ * view holder of cast activity update the data
+ */
 class CastViewHolder (private val view: View) :
     RecyclerView.ViewHolder(view) {
     fun setData(moviesItem: CastX) {

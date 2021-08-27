@@ -8,7 +8,9 @@ import com.bumptech.glide.Glide
 import com.nipun.moviebag.R
 import com.nipun.moviebag.model.reviews.Results
 import de.hdodenhof.circleimageview.CircleImageView
-
+/**
+ * view holder of Review activity update the data
+ */
 class ReviewViewHolder (private val view: View) :
     RecyclerView.ViewHolder(view) {
     fun setData(moviesItem: Results) {

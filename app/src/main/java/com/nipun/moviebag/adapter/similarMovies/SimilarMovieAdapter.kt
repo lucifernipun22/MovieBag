@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.nipun.moviebag.R
 import com.nipun.moviebag.clickListener.ImageClickListener
 import com.nipun.moviebag.model.topRated.Result
-
+/**
+ * adapter for similar movies recycler view
+ */
 class SimilarMovieAdapter(private val trendingList: List<Result>, private val imageClickListener : ImageClickListener) :
     RecyclerView.Adapter<SimilarViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SimilarViewHolder {

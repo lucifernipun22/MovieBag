@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.nipun.moviebag.R
 import com.nipun.moviebag.clickListener.ImageClickListener
 import com.nipun.moviebag.model.topRated.Result
-
+/**
+ * adapter for trending movies horizontally activity recycler view
+ */
 class TrendingMoviesAdapter(private val trendingList: List<Result>, private val imageClickListener : ImageClickListener) :
     RecyclerView.Adapter<TrendingMoviesViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TrendingMoviesViewHolder {
