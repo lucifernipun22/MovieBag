@@ -1,4 +1,6 @@
 
+
+
 <h1 align="center">Movie Bag</h1>
 
 <p align="center">
@@ -33,6 +35,8 @@ MovieBag Assignement Reviews is a sample Android project using The TMDB Movie DB
 
 [Gradle](https://github.com/lucifernipun22/MovieBag/blob/main/app/build.gradle)
 
+
+
 ## Tech Stacks
 * [Retrofit](http://square.github.io/retrofit/) + [OkHttp](http://square.github.io/okhttp/) 
 * [ViewModel](https://developer.android.com/reference/androidx/lifecycle/ViewModel)
@@ -54,7 +58,8 @@ MovieBag Assignement Reviews is a sample Android project using The TMDB Movie DB
 * [The TMDB](https://api.themoviedb.org/3/movie)
 
 ## Preview
-* [Video](https://drive.google.com/file/d/1A6AkVgh5KhO7qMPKyyWDq_RpUIpIIVlg/view?usp=sharing)     <p align="center">
+
+https://user-images.githubusercontent.com/58039469/131102636-548bf569-458d-4f23-a6ab-2e5f4ef6f9c1.mp4
  
   
 </p>
